@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'data/BradleyHandITC-18.vlw';
+  src: url('data/BradleyHandITC-18.ttf');
+}
+
+@font-face {
+  font-family: 'data/HarlowSolid-32.vlw';
+  src: url('data/HarlowSolid-32.ttf');
+}
+
 body {
   margin: auto;
   text-align: center;

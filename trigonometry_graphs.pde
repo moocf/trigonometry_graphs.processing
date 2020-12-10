@@ -1,11 +1,11 @@
-/* @pjs preload="data/BradleyHandITC-18.vlw"; */
-/* @pjs preload="data/HarlowSolid-32.vlw"; */
 /* @pjs preload="data/curve-sin.png"; */
 /* @pjs preload="data/curve-cos.png"; */
 /* @pjs preload="data/curve-tan.png"; */
 /* @pjs preload="data/curve-cosec.png"; */
 /* @pjs preload="data/curve-sec.png"; */
 /* @pjs preload="data/curve-cot.png"; */
+/* @pjs font="data/BradleyHandITC-18.ttf"; */
+/* @pjs font="data/HarlowSolid-32.ttf"; */
 
 // Global Variables
 PFont  harlow, bradley;
@@ -43,7 +43,7 @@ void draw()
   {
     slt = (int)((mouseY) / 80);
     y = 40 + slt*80;
-    textFont(harlow);
+    textFont(harlow, 32);
     textAlign(CENTER);
     fill(160,140,160);
     stroke(110, 120, 150);
@@ -96,7 +96,7 @@ void draw()
   stroke(105, 105, 85);
   strokeWeight(1);
   line(ptX, ptY, 450.0+x, 240.0-y);
-  textFont(bradley);
+  textFont(bradley, 18);
   textAlign(LEFT);
   fill(200,180,200);
   text(Menu[Sel] + "( " + x +"deg ) = " + ans, 10, 470);
