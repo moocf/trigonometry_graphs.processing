@@ -1,3 +1,12 @@
+/* @pjs preload="data/BradleyHandITC-18.vlw"; */
+/* @pjs preload="data/HarlowSolid-32.vlw"; */
+/* @pjs preload="data/curve-sin.png"; */
+/* @pjs preload="data/curve-cos.png"; */
+/* @pjs preload="data/curve-tan.png"; */
+/* @pjs preload="data/curve-cosec.png"; */
+/* @pjs preload="data/curve-sec.png"; */
+/* @pjs preload="data/curve-cot.png"; */
+
 // Global Variables
 PFont  harlow, bradley;
 String Menu[] = {"sin", "cos", "tan", "sec", "cosec", "cot"};
@@ -11,11 +20,11 @@ void setup()
   size(1000, 480);
   background(50, 60, 100);
   smooth();
-  harlow = loadFont("HarlowSolid-32.vlw");
-  bradley = loadFont("BradleyHandITC-18.vlw");
+  harlow = loadFont("data/HarlowSolid-32.vlw");
+  bradley = loadFont("data/BradleyHandITC-18.vlw");
   BackImg = new PImage[6];
   for(i=0; i<6; i++)
-    BackImg[i] = loadImage("curve-"+Menu[i]+".png");
+    BackImg[i] = loadImage("data/curve-"+Menu[i]+".png");
   Sel = 0;
 }
 
@@ -89,6 +98,6 @@ void draw()
   line(ptX, ptY, 450.0+x, 240.0-y);
   textFont(bradley);
   textAlign(LEFT);
-  fill(120,100,120);
+  fill(200,180,200);
   text(Menu[Sel] + "( " + x +"deg ) = " + ans, 10, 470);
 }
